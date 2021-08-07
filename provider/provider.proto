@@ -1,0 +1,16 @@
+syntax = "proto3";
+package session;
+
+option go_package = "github.com/bradenrayhorn/ledger-protos/provider";
+
+message GetUserProvidersRequest {
+   string UserID = 1;
+}
+
+message GetUserProvidersResponse {
+   repeated string ProviderID = 1;
+}
+
+service ProviderService {
+  rpc GetForUser (GetUserProvidersRequest) returns (GetUserProvidersResponse) {}
+}
