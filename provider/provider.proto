@@ -8,7 +8,7 @@ message GetUserProvidersRequest {
 }
 
 message GetUserProvidersResponse {
-   repeated string ProviderID = 1;
+   repeated string ProviderIDs = 1;
 }
 
 service ProviderService {
