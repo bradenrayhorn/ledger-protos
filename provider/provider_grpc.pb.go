@@ -31,7 +31,7 @@ func NewProviderServiceClient(cc grpc.ClientConnInterface) ProviderServiceClient
 
 func (c *providerServiceClient) GetForUser(ctx context.Context, in *GetUserProvidersRequest, opts ...grpc.CallOption) (*GetUserProvidersResponse, error) {
 	out := new(GetUserProvidersResponse)
-	err := c.cc.Invoke(ctx, "/session.ProviderService/GetForUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/provider.ProviderService/GetForUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -76,7 +76,7 @@ func _ProviderService_GetForUser_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/session.ProviderService/GetForUser",
+		FullMethod: "/provider.ProviderService/GetForUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProviderServiceServer).GetForUser(ctx, req.(*GetUserProvidersRequest))
@@ -88,7 +88,7 @@ func _ProviderService_GetForUser_Handler(srv interface{}, ctx context.Context, d
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ProviderService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "session.ProviderService",
+	ServiceName: "provider.ProviderService",
 	HandlerType: (*ProviderServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

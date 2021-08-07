@@ -1,5 +1,5 @@
 syntax = "proto3";
-package session;
+package provider;
 
 option go_package = "github.com/bradenrayhorn/ledger-protos/provider";
 
