@@ -1,0 +1,10 @@
+syntax = "proto3";
+package market;
+
+option go_package = "github.com/bradenrayhorn/ledger-protos/market";
+
+message RequestData {
+  string UserID = 1;
+  string ProviderID = 2;
+}
+

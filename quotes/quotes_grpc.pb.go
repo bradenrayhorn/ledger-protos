@@ -97,5 +97,5 @@ var QuotesService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "quotes.proto",
+	Metadata: "quotes/quotes.proto",
 }

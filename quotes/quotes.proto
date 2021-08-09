@@ -2,9 +2,11 @@ syntax = "proto3";
 package quotes;
 
 option go_package = "github.com/bradenrayhorn/ledger-protos/quotes";
+import "market/market.proto";
 
 message GetQuoteRequest {
    string Symbol = 1;
+   market.RequestData MarketRequestData = 2;
 }
 
 message GetQuoteResponse {

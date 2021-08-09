@@ -14,6 +14,5 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
 ## Generating Files
 
-1. Enter a package directory, in this example `session`
-2. Run `protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative ./session.proto`
+Run `make pkg=<package name> generate`
 
