@@ -1,0 +1,24 @@
+syntax = "proto3";
+package quotes;
+
+option go_package = "github.com/bradenrayhorn/ledger-protos/quotes";
+
+message GetQuoteRequest {
+   string Symbol = 1;
+}
+
+message GetQuoteResponse {
+   Quote Quote = 1;
+}
+
+message Quote {
+  string Symbol = 1;
+  double AskPrice = 2;
+  double BidPrice = 3;
+  double LastPrice = 4;
+}
+
+service QuotesService {
+  rpc GetQuote (GetQuoteRequest) returns (GetQuoteResponse) {}
+}
+
